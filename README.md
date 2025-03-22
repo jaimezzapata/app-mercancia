@@ -84,14 +84,7 @@ npm run dev
       "direccion": "Calle 123 #45-67",
       "identificacion": "1234567890"
     }
-  ]
-}
-```
-
-### Envíos
-
-```json
-{
+  ],
   "envios": [
     {
       "id": "ENVIO1234",
