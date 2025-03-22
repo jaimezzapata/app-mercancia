@@ -1,0 +1,54 @@
+{
+  "clientes": [
+    {
+      "id": "CLI_JZ_001",
+      "nombre": "Jaime Zapata",
+      "direccion": "Av 26 # 52 - 200",
+      "telefono": "3246720301",
+      "ciudad": "Medellin",
+      "imagen": "/clientes/Jaime.jpg"
+    },
+    {
+      "id": "CLI_OC_002",
+      "nombre": "Oscar Cano",
+      "direccion": "Av 26 # 52 - 200",
+      "telefono": "3246720301",
+      "ciudad": "Medellin",
+      "imagen": "/clientes/Jaime.jpg"
+    },
+    {
+      "id": "CLI_AZ_003",
+      "nombre": "Adriana Zapata",
+      "direccion": "Av 26 # 52 - 200",
+      "telefono": "3246720301",
+      "ciudad": "Medellin",
+      "imagen": "/clientes/Jaime.jpg"
+    }
+  ],
+  "envios": [
+    {
+      "id": "ENV_MED_BOG_001",
+      "origen": "Medellin",
+      "destino": "Bogota",
+      "categoria": "Documentos",
+      "fecha_envio": "2024-01-16",
+      "fecha_entrega": "2024-01-17"
+    },
+    {
+      "id": "ENV_CAL_MED_002",
+      "origen": "Cali",
+      "destino": "Medellin",
+      "categoria": "Tecnología",
+      "fecha_envio": "2024-01-16",
+      "fecha_entrega": "2024-01-18"
+    },
+    {
+      "id": "ENV_MON_BUC_003",
+      "origen": "Montería",
+      "destino": "Bucaramanga",
+      "categoria": "Documentos",
+      "fecha_envio": "2024-01-16",
+      "fecha_entrega": "2024-01-19"
+    }
+  ]
+}
