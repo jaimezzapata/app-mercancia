@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "json": "json-server --port 3000 src/database.json"
+    "json": "json-server --port 3000 src/services/database.json"
   },
   "dependencies": {
     "json-server": "^1.0.0-beta.3",
