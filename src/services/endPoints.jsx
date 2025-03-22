@@ -1,10 +1,14 @@
+let server = 'http://localhost:'
+let port = 3000
+let urlBase = server + port
+
 export let endPoints = [
   {
-    URL: 'http://localhost:3000/clientes',
+    URL: `${urlBase}/clientes`,
     nombre: 'Clientes'
   },
   {
-    URL: 'http://localhost:3000/envios',
-    nombre: 'Envíos'
+    URL: `${urlBase}/envios`,
+    nombre: 'envios'
   },
 ]

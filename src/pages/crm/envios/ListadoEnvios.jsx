@@ -1,33 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { endPoints } from '../../../services/endPoints'
+import Card from '../../../components/Card'
 
 const ListadoEnvios = () => {
+
+  const [envios, setEnvios] = useState([])
+  const [errores, serErrores] = useState(null)
+  const usuarioActual = JSON.parse(localStorage.getItem('usuarioLogueado'))
+
+  function getEnvios() {
+    fetch(endPoints[1].URL)
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json);
+        const enviosUsuario = json.filter((item) => item.clienteId == usuarioActual.id)
+        console.log(enviosUsuario);
+        setEnvios(enviosUsuario)
+      })
+  }
+
+  useEffect(() => {
+    getEnvios()
+  }, [])
+
   return (
     <div className='cards'>
-      <div className="card">
-        <div className="tools">
-          <div className="circle">
-            <span className="red box"></span>
-          </div>
-          <div className="circle">
-            <span className="yellow box"></span>
-          </div>
-          <div className="circle">
-            <span className="gray box"></span>
-          </div>
-        </div>
-        <div className="card__content">
-          <h3 className="card__title"></h3>
-          <p className="card__description">Categoria:</p>
-          <p className="card__description">Origen:</p>
-          <p className="card__description">Destino:</p>
-          <p className="card__description">Fecha Entrega:</p>
-          <p className="card__description">Fecha Envío:</p>
-          <div className="card__buttons">
-            <button className="card__button">Editar</button>
-            <button className="card__button">Eliminar</button>
-          </div>
-        </div>
-      </div>
+      {
+        envios.map((envio) => <Card key={envio.id} envio={envio} type={endPoints[1].nombre} />)
+      }
     </div>
   )
 }

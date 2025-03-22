@@ -27,7 +27,7 @@ const Login = () => {
     } else {
       Swal.fire({
         title: "Error",
-        text: "You clicked the button!",
+        text: "Error de credenciales",
         icon: "error"
       });
     }
@@ -48,7 +48,7 @@ const Login = () => {
           <input onChange={(e) => setPassword(e.target.value)} required="" name="" type="password" />
           <label>Password</label>
         </div>
-        <a className='btn-login' onClick={iniciarSesion} href="#">
+        <a className='btn-login' onClick={iniciarSesion}>
           <span></span>
           <span></span>
           <span></span>

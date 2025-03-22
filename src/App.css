@@ -7,6 +7,8 @@
   position: relative;
 }
 
+
+
 .aplicacion__menu-lateral {
   width: 20%;
   position: fixed;
@@ -62,6 +64,9 @@
   letter-spacing: 2px;
   font-weight: 700;
   position: relative;
+  background: none;
+  border: none;
+  font-size: 20px;
 
 }
 
