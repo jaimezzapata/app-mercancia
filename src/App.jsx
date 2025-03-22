@@ -1,30 +1,5 @@
-import { useState, useEffect } from 'react'
 import './App.css'
-import Card from './Card'
-let apiEnvios = 'http://localhost:3000/envios'
-
-
 function App() {
-
-  const [cards, setCards] = useState([])
-  const [errors, setErrors] = useState([])
-  function getEnvios() {
-    fetch(apiEnvios)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data)
-        setCards(data)
-      })
-      .catch(error => {
-        console.log(error)
-        setErrors(error)
-      })
-  }
-
-  useEffect(() => {
-    getEnvios()
-  }, [])
-
   return (
     <div className="aplicacion">
       <aside className="aplicacion__menu-lateral">
@@ -45,11 +20,31 @@ function App() {
           </section>
           <section className="aplicacion__informacion">
             <div className='cards'>
-              {
-                cards.length == 0 ? <h2 className='cards__vacias'>No hay información registrada</h2> : cards.map((card) => {
-                  return <Card key={card.id} prop={card} />
-                })
-              }
+              <div className="card">
+                <div className="tools">
+                  <div className="circle">
+                    <span className="red box"></span>
+                  </div>
+                  <div className="circle">
+                    <span className="yellow box"></span>
+                  </div>
+                  <div className="circle">
+                    <span className="gray box"></span>
+                  </div>
+                </div>
+                <div className="card__content">
+                  <h3 className="card__title"></h3>
+                  <p className="card__description">Categoria:</p>
+                  <p className="card__description">Origen:</p>
+                  <p className="card__description">Destino:</p>
+                  <p className="card__description">Fecha Entrega:</p>
+                  <p className="card__description">Fecha Envío:</p>
+                  <div className="card__buttons">
+                    <button className="card__button">Editar</button>
+                    <button className="card__button">Eliminar</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </main>
