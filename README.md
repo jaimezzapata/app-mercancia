@@ -54,17 +54,17 @@ Sigue estos pasos para clonar y ejecutar el proyecto localmente:
 
 ```bash
 # 1. Clona el repositorio
-git clone https://github.com/tu-usuario/track-x.git
+git clone https://github.com/jaimezzapata/app-mercancia.git
 cd track-x
 
 # 2. Instala las dependencias del frontend
 npm install
 
 # 3. Inicia el servidor JSON (backend simulado)
-npx json-server --watch db.json --port 3000
+npx run json (este se abre automaticamente al abrir el proyecto con visual studio code)
 
 # 4. En una nueva terminal, inicia el frontend con Vite
-npm run dev
+npm run dev (este se abre automaticamente al abrir el proyecto con visual studio code)
 ```
 
 ---
