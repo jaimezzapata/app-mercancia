@@ -1,120 +1,137 @@
-# CRM de Seguimiento y Control de Envíos
+# 🚚 Track X
 
-## Descripción del Proyecto
-Este proyecto es una aplicación tipo CRM diseñada para facilitar el seguimiento, control y administración de clientes y envíos de paquetes. Permite gestionar información detallada de los clientes y sus envíos, proporcionando una interfaz intuitiva y eficiente para mejorar la experiencia del usuario y optimizar el flujo de trabajo.
+**Track X** es una aplicación web diseñada para realizar el seguimiento de envíos de clientes hacia diferentes ciudades, de forma clara, ágil y eficiente.
 
-## Tecnologías Utilizadas
-El desarrollo de esta aplicación se basa en las siguientes tecnologías y herramientas:
+---
 
-- **Frontend:** React JS (desarrollado con Vite)
-- **Backend Simulado:** json-server
-- **Manejo de solicitudes HTTP:** axios
-- **Alertas y notificaciones:** sweetalert2
-- **Iconografía:** fontawesome
-- **Enrutamiento:** react-router-dom
+## 📌 Descripción
 
-## Modelo de Datos
-La aplicación utiliza un modelo de datos no relacional basado en JSON. A continuación, se presenta la estructura del modelo:
+Esta app permite registrar, visualizar y actualizar el estado de los envíos, asignando cada uno a un cliente y una ciudad específica. Ideal para pequeñas empresas o negocios que gestionan entregas en varias ubicaciones.
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- **React JS** – Biblioteca principal para la interfaz de usuario  
+- **JSON-Server** – Simulación de API REST con datos en formato JSON  
+- **React Router DOM** – Ruteo dinámico entre vistas  
+- **Axios** – Cliente HTTP para conectar con la API  
+- **Fetch API** – Alternativa para peticiones HTTP  
+- **SweetAlert2** – Alertas modernas y estilizadas  
+- **Font Awesome** – Iconografía para una interfaz más visual  
+- **CSS** – Estilos personalizados  
+- **HTML** – Estructura base del proyecto  
+
+---
+
+## 🎨 Paleta de colores
+
+- `#F28B30`  
+- `#BF8E63`  
+- `#F2762E`  
+- `#D95323`  
+- `#731702`  
+
+## 🔤 Tipografías
+
+- **Lato** – Títulos  
+- **Roboto** – Contenido general  
+
+---
+
+## 🚀 Ejecución del proyecto
+
+El proyecto se ejecuta con dos servicios en paralelo:
+
+- **Backend**: JSON-Server (puerto por defecto: `http://localhost:3000`)
+- **Frontend**: Vite + React (puerto por defecto: `http://localhost:5173`)
+
+---
+
+## 💾 Instalación
+
+Sigue estos pasos para clonar y ejecutar el proyecto localmente:
+
+```bash
+# 1. Clona el repositorio
+git clone https://github.com/tu-usuario/track-x.git
+cd track-x
+
+# 2. Instala las dependencias del frontend
+npm install
+
+# 3. Inicia el servidor JSON (backend simulado)
+npx json-server --watch db.json --port 3000
+
+# 4. En una nueva terminal, inicia el frontend con Vite
+npm run dev
+```
+
+---
+
+## 🧩 Modelo de datos (NoSQL)
+
+### Clientes
 
 ```json
 {
   "clientes": [
     {
       "id": 1,
-      "nombre_completo": "Juan Pérez",
-      "telefono": "3001234567",
-      "documento": "123456789",
-      "direccion": "Calle 123 #45-67",
+      "nombre": "Juan Pérez",
       "ciudad": "Medellín",
-      "correo": "juan.perez@example.com"
-    }
-  ],
-  "envios": [
-    {
-      "id": 1,
-      "cliente_id": 1,
-      "fecha_envio": "2025-03-07",
-      "fecha_llegada": "2025-03-10",
-      "dias_envio": 3,
-      "ciudad_origen": "Medellín",
-      "ciudad_destino": "Bogotá",
-      "descripcion": "Paquete mediano - Documentos",
-      "valor": 25000,
-      "peso": "2 kg",
-      "categoria": "Documentos"
+      "telefono": "3123456789",
+      "direccion": "Calle 123 #45-67",
+      "identificacion": "1234567890"
     }
   ]
 }
 ```
 
-## Paleta de Colores y Tipografía
-Para la interfaz de usuario, se ha definido la siguiente paleta de colores:
+### Envíos
 
-- ![#F28B30](https://via.placeholder.com/15/F28B30/000000?text=+) `#F28B30`
-- ![#BF8E63](https://via.placeholder.com/15/BF8E63/000000?text=+) `#BF8E63`
-- ![#F2762E](https://via.placeholder.com/15/F2762E/000000?text=+) `#F2762E`
-- ![#D95323](https://via.placeholder.com/15/D95323/000000?text=+) `#D95323`
-- ![#731702](https://via.placeholder.com/15/731702/000000?text=+) `#731702`
-
-### Tipografía:
-- **Roboto** (para texto general)
-- **Lato** (para encabezados y elementos destacados)
-
-## Instrucciones de Instalación y Ejecución
-### Requisitos Previos
-- Tener **Node.js** instalado en el sistema
-- Usar una terminal recomendada: **CMD o PowerShell**
-
-### Instalación
-1. Clonar el repositorio:
-   ```sh
-   git clone https://github.com/usuario/proyecto-crm-envios.git
-   ```
-2. Acceder al directorio del proyecto:
-   ```sh
-   cd proyecto-crm-envios
-   ```
-3. Instalar las dependencias:
-   ```sh
-   npm install
-   ```
-
-### Ejecución del Proyecto
-1. Iniciar el servidor json-server:
-   ```sh
-   npx json-server --watch db.json --port 3001
-   ```
-2. Iniciar la aplicación en modo desarrollo:
-   ```sh
-   npm run dev
-   ```
-
-## Estructura de Carpetas
-El proyecto sigue la siguiente estructura de directorios:
-
+```json
+{
+  "envios": [
+    {
+      "id": "ENVIO1234",
+      "nombre": "Pedido de Juan",
+      "fechaEnvio": "2025-03-21",
+      "fechaEntrega": "2025-03-23",
+      "ciudadOrigen": "Medellín",
+      "ciudadDestino": "Bogotá",
+      "descripcion": "Documentos urgentes"
+    }
+  ]
+}
 ```
-proyecto-crm-envios/
-│── public/
-│── src/
-│   │── assets/          # Recursos estáticos (imágenes, estilos, iconos)
-│   │── components/      # Componentes reutilizables
-│   │── pages/           # Páginas de la aplicación
-│   │── services/        # Llamadas a la API (uso de axios)
-│   │── styles/          # Archivos de estilos globales
-│   │── App.jsx          # Componente principal
-│   │── main.jsx         # Punto de entrada de React
-│── db.json              # Base de datos simulada con json-server
-│── package.json         # Archivo de configuración de npm
-│── vite.config.js       # Configuración de Vite
-```
-
-### Notas Adicionales
-- El proyecto **no** utiliza `useContext` ni hooks personalizados.
-- El backend se simula con `json-server`, por lo que no hay una base de datos real.
-
-## Contribución
-Si deseas contribuir al proyecto, puedes hacer un fork del repositorio, realizar tus modificaciones y enviar un pull request.
 
 ---
-¡Gracias por tu interés en este proyecto! 🚀
 
+## 🗂️ Estructura del proyecto
+
+```
+track-x/
+│
+├── public/
+│
+├── src/
+│   ├── components/      # Componentes reutilizables
+│   ├── pages/           # Vistas principales de la app
+│   ├── routes/          # Definición de rutas con React Router
+│   ├── helpers/         # Funciones utilitarias y helpers
+│   ├── servicios/       # Conexión con API (axios o fetch)
+│       ├── db.json      # Archivo simulado de la base de datos
+│   └── App.jsx
+│
+├── package.json
+└── README.md
+```
+
+---
+
+## 📫 Autor
+
+Desarrollado por **Jaime Zapata**  
+Frontend Developer & Docente de desarrollo de software  
+🚀 ¡Gracias por visitar este proyecto!
