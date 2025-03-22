@@ -1,0 +1,36 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nombre": "Juan Pérez",
+      "ciudad": "Medellín",
+      "telefono": "3123456789",
+      "direccion": "Calle 123 #45-67",
+      "identificacion": "1234567890",
+      "usuario": "juan@correo.com",
+      "password": "juan"
+    },
+    {
+      "id": 2,
+      "nombre": "Jaime Zapata",
+      "ciudad": "Medellín",
+      "telefono": "3123456789",
+      "direccion": "Calle 123 #45-67",
+      "identificacion": "1234567890",
+      "usuario": "jaime@correo.com",
+      "password": "jaime"
+    }
+  ],
+  "envios": [
+    {
+      "id": "ENVIO1234",
+      "clienteId": 1,
+      "nombre": "Pedido de Juan",
+      "fechaEnvio": "2025-03-21",
+      "fechaEntrega": "2025-03-23",
+      "ciudadOrigen": "Medellín",
+      "ciudadDestino": "Bogotá",
+      "descripcion": "Documentos urgentes"
+    }
+  ]
+}
