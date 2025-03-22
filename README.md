@@ -54,17 +54,17 @@ Sigue estos pasos para clonar y ejecutar el proyecto localmente:
 
 ```bash
 # 1. Clona el repositorio
-git clone https://github.com/jaimezzapata/app-mercancia.git
+git clone https://github.com/tu-usuario/track-x.git
 cd track-x
 
 # 2. Instala las dependencias del frontend
 npm install
 
 # 3. Inicia el servidor JSON (backend simulado)
-npx run json (este se abre automaticamente al abrir el proyecto con visual studio code)
+npx json-server --watch db.json --port 3000
 
 # 4. En una nueva terminal, inicia el frontend con Vite
-npm run dev (este se abre automaticamente al abrir el proyecto con visual studio code)
+npm run dev
 ```
 
 ---
@@ -95,6 +95,7 @@ npm run dev (este se abre automaticamente al abrir el proyecto con visual studio
   "envios": [
     {
       "id": "ENVIO1234",
+      "clienteId": 1,
       "nombre": "Pedido de Juan",
       "fechaEnvio": "2025-03-21",
       "fechaEntrega": "2025-03-23",
@@ -105,6 +106,8 @@ npm run dev (este se abre automaticamente al abrir el proyecto con visual studio
   ]
 }
 ```
+
+> 🔗 Cada envío se relaciona con un cliente mediante el campo `clienteId`.
 
 ---
 
@@ -121,9 +124,9 @@ track-x/
 │   ├── routes/          # Definición de rutas con React Router
 │   ├── helpers/         # Funciones utilitarias y helpers
 │   ├── servicios/       # Conexión con API (axios o fetch)
-│       ├── db.json      # Archivo simulado de la base de datos
 │   └── App.jsx
 │
+├── db.json              # Base de datos simulada con JSON Server
 ├── package.json
 └── README.md
 ```
@@ -133,5 +136,5 @@ track-x/
 ## 📫 Autor
 
 Desarrollado por **Jaime Zapata**  
-Frontend Developer & Docente de desarrollo de software  
+Tecnólogo en ADSI - Frontend Developer & Docente de desarrollo de software  
 🚀 ¡Gracias por visitar este proyecto!
