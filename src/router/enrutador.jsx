@@ -1,20 +1,21 @@
 import App from "../pages/App";
 import Login from "../pages/auth/Login";
 import ListadoEnvios from "../pages/crm/envios/ListadoEnvios";
+import RutaProtegida from "../components/RutaProtegida";
 
-export let enrutador = [
+export const enrutador = [
   {
-    path: '/',
-    element: <Login />
+    path: "/",
+    element: <Login />,
   },
   {
-    path: '/home/',
-    element: <App />,
+    path: "/home/",
+    element: <RutaProtegida proteger={<App />} />,
     children: [
       {
-        path: 'envios',
-        element: <ListadoEnvios />
-      }
-    ]
-  }
-]
+        path: "envios",
+        element: <RutaProtegida proteger={<ListadoEnvios />} />
+      },
+    ],
+  },
+];

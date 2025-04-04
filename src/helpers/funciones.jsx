@@ -1,7 +1,6 @@
-// helpers/funciones.js
 import Swal from "sweetalert2";
-
-export function alertRedireccion(redireccion, ruta = '/home', mensaje = 'Redireccionando...') {
+import { v4 } from "uuid";
+export function alertRedireccion(redireccion, path, mensaje) {
   let timerInterval;
   Swal.fire({
     title: mensaje,
@@ -18,7 +17,25 @@ export function alertRedireccion(redireccion, ruta = '/home', mensaje = 'Redirec
     },
     willClose: () => {
       clearInterval(timerInterval);
-      redireccion(ruta);
+      redireccion(path);
     }
   });
+}
+export function alertaError(titulo, mensaje, icono) {
+  Swal.fire({
+    title: titulo,
+    text: mensaje,
+    icon: icono,
+    draggable: true
+  });
+}
+
+export function generaId() {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  const length = Math.floor(Math.random() * (11 - 8)) + 8;
+  let result = '';
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return result;
 }

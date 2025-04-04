@@ -1,46 +1,330 @@
 {
   "clientes": [
     {
-      "id": 1,
-      "nombre": "Juan Pérez",
-      "ciudad": "Medellín",
-      "telefono": "3123456789",
-      "direccion": "Calle 123 #45-67",
-      "identificacion": "1234567890",
-      "usuario": "juan@correo.com",
-      "password": "juan"
+      "id": "1",
+      "nombre": "Jaime Zapata",
+      "direccion": "Av 26 # 52 - 200",
+      "telefono": "3246720301",
+      "ciudad": "Medellin",
+      "imagen": "/clientes/Jaime.jpg",
+      "usuario": "jzapata",
+      "password": "123456"
     },
     {
-      "id": 2,
-      "nombre": "Jaime Zapata",
-      "ciudad": "Medellín",
-      "telefono": "3123456789",
-      "direccion": "Calle 123 #45-67",
-      "identificacion": "1234567890",
-      "usuario": "jaime@correo.com",
-      "password": "jaime"
+      "id": "2",
+      "nombre": "Oscar Canzo",
+      "direccion": "Av 26 # 52 - 200",
+      "telefono": "3246720301",
+      "ciudad": "Medellin",
+      "imagen": "/clientes/Jaime.jpg",
+      "usuario": "ocanzo",
+      "password": "123456"
+    },
+    {
+      "id": "3",
+      "nombre": "Adriana Zapata",
+      "direccion": "Av 26 # 52 - 200",
+      "telefono": "3246720301",
+      "ciudad": "Medellin",
+      "imagen": "/clientes/Jaime.jpg"
+    },
+    {
+      "id": "4",
+      "nombre": "Carolina Mendoza",
+      "direccion": "Calle 45 # 23 - 12",
+      "telefono": "3157894562",
+      "ciudad": "Bogota",
+      "imagen": "/clientes/Carolina.jpg"
+    },
+    {
+      "id": "5",
+      "nombre": "Luis Rodriguez",
+      "direccion": "Carrera 70 # 12 - 45",
+      "telefono": "3009876543",
+      "ciudad": "Cali",
+      "imagen": "/clientes/Luis.jpg"
+    },
+    {
+      "id": "6",
+      "nombre": "Maria Valencia",
+      "direccion": "Calle 80 # 65 - 32",
+      "telefono": "3214567890",
+      "ciudad": "Barranquilla",
+      "imagen": "/clientes/Maria.jpg",
+      "usuario": "mvalencia",
+      "password": "123456"
     }
   ],
   "envios": [
     {
-      "id": "ENVIO1234",
-      "clienteId": 1,
-      "nombre": "Pedido de Juan",
-      "fechaEnvio": "2025-03-21",
-      "fechaEntrega": "2025-03-23",
-      "ciudadOrigen": "Medellín",
-      "ciudadDestino": "Bogotá",
-      "descripcion": "Tecnología"
+      "id": "ENV_MED_BOG_001",
+      "clienteId": "1",
+      "origen": "Medellin",
+      "destino": "Bogota",
+      "categoria": "Documentos",
+      "fecha_envio": "2024-01-16",
+      "fecha_entrega": "2024-01-17"
     },
     {
-      "id": "ENVIO1234",
-      "clienteId": 2,
-      "nombre": "Pedido de Jaime",
-      "fechaEnvio": "2025-03-21",
-      "fechaEntrega": "2025-03-23",
-      "ciudadOrigen": "Medellín",
-      "ciudadDestino": "Bogotá",
-      "descripcion": "Documentos urgentes"
+      "id": "ENV_MED_CAL_002",
+      "clienteId": "1",
+      "origen": "Medellin",
+      "destino": "Cali",
+      "categoria": "Tecnología",
+      "fecha_envio": "2024-01-17",
+      "fecha_entrega": "2024-01-19"
+    },
+    {
+      "id": "ENV_MED_BAR_003",
+      "clienteId": "1",
+      "origen": "Medellin",
+      "destino": "Barranquilla",
+      "categoria": "Ropa",
+      "fecha_envio": "2024-01-18",
+      "fecha_entrega": "2024-01-20"
+    },
+    {
+      "id": "ENV_MED_CAR_004",
+      "clienteId": "1",
+      "origen": "Medellin",
+      "destino": "Cartagena",
+      "categoria": "Alimentos",
+      "fecha_envio": "2024-01-19",
+      "fecha_entrega": "2024-01-21"
+    },
+    {
+      "id": "ENV_MED_PER_005",
+      "clienteId": "1",
+      "origen": "Medellin",
+      "destino": "Pereira",
+      "categoria": "Documentos",
+      "fecha_envio": "2024-01-20",
+      "fecha_entrega": "2024-01-21"
+    },
+    {
+      "id": "ENV_BOG_MED_006",
+      "clienteId": "2",
+      "origen": "Bogota",
+      "destino": "Medellin",
+      "categoria": "Electrónicos",
+      "fecha_envio": "2024-01-16",
+      "fecha_entrega": "2024-01-18"
+    },
+    {
+      "id": "ENV_BOG_CAL_007",
+      "clienteId": "2",
+      "origen": "Bogota",
+      "destino": "Cali",
+      "categoria": "Documentos",
+      "fecha_envio": "2024-01-17",
+      "fecha_entrega": "2024-01-19"
+    },
+    {
+      "id": "ENV_BOG_BAR_008",
+      "clienteId": "2",
+      "origen": "Bogota",
+      "destino": "Barranquilla",
+      "categoria": "Ropa",
+      "fecha_envio": "2024-01-18",
+      "fecha_entrega": "2024-01-20"
+    },
+    {
+      "id": "ENV_BOG_BUC_009",
+      "clienteId": "2",
+      "origen": "Bogota",
+      "destino": "Bucaramanga",
+      "categoria": "Libros",
+      "fecha_envio": "2024-01-19",
+      "fecha_entrega": "2024-01-21"
+    },
+    {
+      "id": "ENV_BOG_PER_010",
+      "clienteId": "2",
+      "origen": "Bogota",
+      "destino": "Pereira",
+      "categoria": "Tecnología",
+      "fecha_envio": "2024-01-20",
+      "fecha_entrega": "2024-01-22"
+    },
+    {
+      "id": "ENV_CAL_MED_011",
+      "clienteId": "3",
+      "origen": "Cali",
+      "destino": "Medellin",
+      "categoria": "Documentos",
+      "fecha_envio": "2024-01-16",
+      "fecha_entrega": "2024-01-18"
+    },
+    {
+      "id": "ENV_CAL_BOG_012",
+      "clienteId": "3",
+      "origen": "Cali",
+      "destino": "Bogota",
+      "categoria": "Alimentos",
+      "fecha_envio": "2024-01-17",
+      "fecha_entrega": "2024-01-19"
+    },
+    {
+      "id": "ENV_CAL_BAR_013",
+      "clienteId": "3",
+      "origen": "Cali",
+      "destino": "Barranquilla",
+      "categoria": "Ropa",
+      "fecha_envio": "2024-01-18",
+      "fecha_entrega": "2024-01-20"
+    },
+    {
+      "id": "ENV_CAL_CAR_014",
+      "clienteId": "3",
+      "origen": "Cali",
+      "destino": "Cartagena",
+      "categoria": "Tecnología",
+      "fecha_envio": "2024-01-19",
+      "fecha_entrega": "2024-01-21"
+    },
+    {
+      "id": "ENV_CAL_PER_015",
+      "clienteId": "3",
+      "origen": "Cali",
+      "destino": "Pereira",
+      "categoria": "Documentos",
+      "fecha_envio": "2024-01-20",
+      "fecha_entrega": "2024-01-22"
+    },
+    {
+      "id": "ENV_BOG_MED_016",
+      "clienteId": "4",
+      "origen": "Bogota",
+      "destino": "Medellin",
+      "categoria": "Electrónicos",
+      "fecha_envio": "2024-01-16",
+      "fecha_entrega": "2024-01-18"
+    },
+    {
+      "id": "ENV_BOG_CAL_017",
+      "clienteId": "4",
+      "origen": "Bogota",
+      "destino": "Cali",
+      "categoria": "Libros",
+      "fecha_envio": "2024-01-17",
+      "fecha_entrega": "2024-01-19"
+    },
+    {
+      "id": "ENV_BOG_BAR_018",
+      "clienteId": "4",
+      "origen": "Bogota",
+      "destino": "Barranquilla",
+      "categoria": "Ropa",
+      "fecha_envio": "2024-01-18",
+      "fecha_entrega": "2024-01-20"
+    },
+    {
+      "id": "ENV_BOG_CAR_019",
+      "clienteId": "4",
+      "origen": "Bogota",
+      "destino": "Cartagena",
+      "categoria": "Documentos",
+      "fecha_envio": "2024-01-19",
+      "fecha_entrega": "2024-01-21"
+    },
+    {
+      "id": "ENV_BOG_PER_020",
+      "clienteId": "4",
+      "origen": "Bogota",
+      "destino": "Pereira",
+      "categoria": "Alimentos",
+      "fecha_envio": "2024-01-20",
+      "fecha_entrega": "2024-01-22"
+    },
+    {
+      "id": "ENV_CAL_MED_021",
+      "clienteId": "5",
+      "origen": "Cali",
+      "destino": "Medellin",
+      "categoria": "Tecnología",
+      "fecha_envio": "2024-01-16",
+      "fecha_entrega": "2024-01-18"
+    },
+    {
+      "id": "ENV_CAL_BOG_022",
+      "clienteId": "5",
+      "origen": "Cali",
+      "destino": "Bogota",
+      "categoria": "Documentos",
+      "fecha_envio": "2024-01-17",
+      "fecha_entrega": "2024-01-19"
+    },
+    {
+      "id": "ENV_CAL_BAR_023",
+      "clienteId": "5",
+      "origen": "Cali",
+      "destino": "Barranquilla",
+      "categoria": "Ropa",
+      "fecha_envio": "2024-01-18",
+      "fecha_entrega": "2024-01-20"
+    },
+    {
+      "id": "ENV_CAL_CAR_024",
+      "clienteId": "5",
+      "origen": "Cali",
+      "destino": "Cartagena",
+      "categoria": "Electrónicos",
+      "fecha_envio": "2024-01-19",
+      "fecha_entrega": "2024-01-21"
+    },
+    {
+      "id": "ENV_CAL_PER_025",
+      "clienteId": "5",
+      "origen": "Cali",
+      "destino": "Pereira",
+      "categoria": "Libros",
+      "fecha_envio": "2024-01-20",
+      "fecha_entrega": "2024-01-22"
+    },
+    {
+      "id": "ENV_BAR_MED_026",
+      "clienteId": "6",
+      "origen": "Barranquilla",
+      "destino": "Medellin",
+      "categoria": "Documentos",
+      "fecha_envio": "2024-01-16",
+      "fecha_entrega": "2024-01-18"
+    },
+    {
+      "id": "ENV_BAR_BOG_027",
+      "clienteId": "6",
+      "origen": "Barranquilla",
+      "destino": "Bogota",
+      "categoria": "Ropa",
+      "fecha_envio": "2024-01-17",
+      "fecha_entrega": "2024-01-19"
+    },
+    {
+      "id": "ENV_BAR_CAL_028",
+      "clienteId": "6",
+      "origen": "Barranquilla",
+      "destino": "Cali",
+      "categoria": "Tecnología",
+      "fecha_envio": "2024-01-18",
+      "fecha_entrega": "2024-01-20"
+    },
+    {
+      "id": "ENV_BAR_CAR_029",
+      "clienteId": "6",
+      "origen": "Barranquilla",
+      "destino": "Cartagena",
+      "categoria": "Alimentos",
+      "fecha_envio": "2024-01-19",
+      "fecha_entrega": "2024-01-21"
+    },
+    {
+      "id": "ENV_BAR_PER_030",
+      "clienteId": "6",
+      "origen": "Barranquilla",
+      "destino": "Pereira",
+      "categoria": "Electrónicos",
+      "fecha_envio": "2024-01-20",
+      "fecha_entrega": "2024-01-22"
     }
   ]
 }

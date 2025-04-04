@@ -5,7 +5,7 @@ let urlBase = server + port
 export let endPoints = [
   {
     URL: `${urlBase}/clientes`,
-    nombre: 'Clientes'
+    nombre: 'clientes'
   },
   {
     URL: `${urlBase}/envios`,

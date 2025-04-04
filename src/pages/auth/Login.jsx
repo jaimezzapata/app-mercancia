@@ -1,11 +1,11 @@
 import { endPoints } from '../../services/endPoints'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import Swal from 'sweetalert2'
 import './Login.css'
-import { alertRedireccion } from '../../helpers/funciones'
+import { alertaError, alertRedireccion, generaId } from '../../helpers/funciones'
 
 const Login = () => {
+
   const [usuarios, setUsuarios] = useState([])
   const [usuario, setUsuario] = useState("")
   const [password, setPassword] = useState("")
@@ -18,20 +18,17 @@ const Login = () => {
   function buscarUsuario() {
     return usuarios.find((item) => item.usuario == usuario && item.password == password)
   }
-  function iniciarSesion() {
-    const usuarioEncontrado = buscarUsuario()
-    console.log(buscarUsuario());
+  const iniciarSesion = () => {
+    const usuarioEncontrado = buscarUsuario();
     if (usuarioEncontrado) {
-      localStorage.setItem('usuarioLogueado', JSON.stringify(usuarioEncontrado));
-      alertRedireccion(redireccion, '/home');
+      const tokenLogin = generaId(); 
+      localStorage.setItem("token", tokenLogin);
+      localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioEncontrado));
+      alertRedireccion(redireccion, "/home", "Será redirigido a la página principal");
     } else {
-      Swal.fire({
-        title: "Error",
-        text: "Error de credenciales",
-        icon: "error"
-      });
+      alertaError("Error de credenciales", "Por favor, verifique su usuario y contraseña", "error");
     }
-  }
+  };
   useEffect(() => {
     getUsuarios()
   }, [])

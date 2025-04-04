@@ -22,10 +22,10 @@ const Card = ({ envio, type }) => {
               <h3 className="card__title"></h3>
               <p className="card__description">ID Envío: {envio.id}</p>
               <p className="card__description">Nombre cliente: {usuarioActual.nombre}</p>
-              <p className="card__description">Origen:{envio.ciudadOrigen}</p>
-              <p className="card__description">Destino: {envio.ciudadDestino}</p>
-              <p className="card__description">Fecha Entrega: {envio.fechaEntrega}</p>
-              <p className="card__description">Fecha Envío: {envio.ciudadDestino}</p>
+              <p className="card__description">Origen:{envio.origen}</p>
+              <p className="card__description">Destino: {envio.destino}</p>
+              <p className="card__description">Fecha Entrega: {envio.fecha_envio}</p>
+              <p className="card__description">Fecha Envío: {envio.fecha_entrega}</p>
               <div className="card__buttons">
                 <button className="card__button">Editar</button>
                 <button className="card__button">Eliminar</button>
